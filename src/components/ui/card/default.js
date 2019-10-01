@@ -1,14 +1,15 @@
 import React from "react";
-import Img from "../../../assets/images/progra.jpeg";
 
-function UiCard() {
+import { Link } from "react-router-dom";
+
+function UiCard({ link, image, title }) {
   return (
     <div>
-      <a href="/">
-        <img src={Img} alt=""></img>
-      </a>
+      <Link to={link}>
+        <img src={image} alt=""></img>
+      </Link>
       <h2>
-        <a href="/">Arquitectura de software</a>
+        <Link to={link}>{title}</Link>
       </h2>
     </div>
   );

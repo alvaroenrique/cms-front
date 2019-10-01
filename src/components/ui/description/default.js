@@ -11,16 +11,21 @@ const H1 = styled.h1`
 const P = styled.p`
   margin: 40px auto;
   width: 52rem;
+  line-height: 1.5rem;
 `;
 
-function UiDescription() {
+const Img = styled.img`
+  margin: 0 auto;
+  display: block;
+  width: 52rem;
+`;
+
+function UiDescription({ title, subtitle, image }) {
   return (
     <>
-      <H1>Recomendaciones de libros online</H1>
-      <P>
-        Bookstore.com es una página que te recomienda libros y te ayuda a
-        encontrar los mejores precios en internet.
-      </P>
+      <H1>{title}</H1>
+      {image && <Img src={image} alt=""></Img>}
+      <P>{subtitle}</P>
     </>
   );
 }

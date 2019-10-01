@@ -6,6 +6,7 @@ import UiFooter from "./components/ui/footer/default";
 
 import Home from "./components/pages/home";
 import Categories from "./components/pages/categories";
+import Book from "./components/pages/book";
 
 const pages = [
   {
@@ -16,6 +17,10 @@ const pages = [
   {
     path: "/categories",
     component: Categories
+  },
+  {
+    path: "/book",
+    component: Book
   }
 ];
 
@@ -23,24 +28,13 @@ function App() {
   return (
     <BrowserRouter>
       <UiHeader></UiHeader>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/categories">categories</Link>
-          </li>
-        </ul>
-      </nav>
 
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
       <Switch>
         {pages.map(page => (
           <Route {...page}></Route>
         ))}
       </Switch>
+
       <UiFooter></UiFooter>
     </BrowserRouter>
   );

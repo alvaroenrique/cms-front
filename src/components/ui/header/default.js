@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 const Header = styled.header`
   height: 55px;
   background-color: #dd3333;
@@ -13,7 +15,7 @@ const H1 = styled.h1`
   width: 52rem;
 `;
 
-const A = styled.a`
+const A = styled(Link)`
   text-decoration: none;
   color: white;
   font-weight: 700;
@@ -24,7 +26,7 @@ function UiHeader() {
   return (
     <Header>
       <H1>
-        <A href="/">Book store</A>
+        <A to="/">Book store</A>
       </H1>
     </Header>
   );
