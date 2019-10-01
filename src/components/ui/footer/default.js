@@ -3,16 +3,14 @@ import styled from "styled-components";
 
 const Footer = styled.footer`
   height: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
   border-top: 1px solid #dbdbdb;
+  max-width: 52rem;
+  margin: 20px auto;
+  padding: 20px 0;
 `;
 
-const H1 = styled.h1`
-  width: 52rem;
-`;
+const H1 = styled.h1``;
 
 const A = styled.a`
   text-decoration: none;

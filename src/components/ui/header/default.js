@@ -9,6 +9,10 @@ const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  @media (min-width: 960px) {
+    padding: 0;
+  }
 `;
 
 const H1 = styled.h1`

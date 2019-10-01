@@ -8,8 +8,12 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  width: 52rem;
+  max-width: 52rem;
   margin: 40px auto;
+  padding: 0 20px;
+  @media (min-width: 960px) {
+    padding: 0;
+  }
 `;
 
 function Book() {
@@ -24,7 +28,7 @@ function Book() {
           image:
             "https://images-na.ssl-images-amazon.com/images/I/61RRViAYqdL.jpg"
         }}
-      ></UiDescription>
+      />
       <Grid>
         <UiCard
           {...{
@@ -33,7 +37,7 @@ function Book() {
             link: "/",
             title: "Comprar"
           }}
-        ></UiCard>
+        />
       </Grid>
     </>
   );

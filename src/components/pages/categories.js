@@ -8,8 +8,12 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  width: 52rem;
+  max-width: 52rem;
   margin: 40px auto;
+  padding: 0 20px;
+  @media (min-width: 960px) {
+    padding: 0;
+  }
 `;
 
 function Categories() {
@@ -23,7 +27,7 @@ function Categories() {
           image:
             "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
         }}
-      ></UiDescription>
+      />
       <Grid>
         <UiCard
           {...{
@@ -32,7 +36,7 @@ function Categories() {
             link: "/book",
             title: "Código limpio"
           }}
-        ></UiCard>
+        />
       </Grid>
     </>
   );

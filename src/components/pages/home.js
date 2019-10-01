@@ -8,20 +8,27 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
-  width: 52rem;
-  margin: 40px auto;
+`;
+
+const Container = styled.div`
+  max-width: 52rem;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media (min-width: 960px) {
+    padding: 0;
+  }
 `;
 
 function Home() {
   return (
-    <>
+    <Container>
       <UiDescription
         {...{
           title: "Recomendaciones de libros online",
           subtitle:
             "Bookstore.com es una página que te recomienda libros y te ayuda a encontrar los mejores precios en internet."
         }}
-      ></UiDescription>
+      />
       <Grid>
         <UiCard
           {...{
@@ -30,9 +37,9 @@ function Home() {
             link: "/categories",
             title: "Arquitectura de software"
           }}
-        ></UiCard>
+        />
       </Grid>
-    </>
+    </Container>
   );
 }
 
