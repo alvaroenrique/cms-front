@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import UiHeader from "./components/ui/header/default";
 import UiFooter from "./components/ui/footer/default";

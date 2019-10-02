@@ -1,24 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 
 import UiDescription from "../ui/description/default";
 import UiCard from "../ui/card/default";
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
-  max-width: 52rem;
-  margin: 40px auto;
-  padding: 0 20px;
-  @media (min-width: 960px) {
-    padding: 0;
-  }
-`;
+import { Grid, Container } from "../styled/layout";
 
 function Book() {
   return (
-    <>
+    <Container>
       <UiDescription
         {...{
           title:
@@ -39,7 +28,7 @@ function Book() {
           }}
         />
       </Grid>
-    </>
+    </Container>
   );
 }
 

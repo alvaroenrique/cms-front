@@ -5,12 +5,17 @@ const Footer = styled.footer`
   height: 52px;
   margin-top: 20px;
   border-top: 1px solid #dbdbdb;
-  max-width: 52rem;
-  margin: 20px auto;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  @media (min-width: 960px) {
+    padding: 20px 0;
+  }
 `;
 
-const H1 = styled.h1``;
+const H1 = styled.h1`
+  width: 52rem;
+`;
 
 const A = styled.a`
   text-decoration: none;
