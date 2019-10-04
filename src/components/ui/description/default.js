@@ -31,4 +31,6 @@ function UiDescription({ title, subtitle, image }) {
   );
 }
 
+UiDescription.label = "Descripción";
+
 export default UiDescription;

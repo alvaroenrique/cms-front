@@ -32,4 +32,6 @@ function Book() {
   );
 }
 
+Book.label = "Libro";
+
 export default Book;

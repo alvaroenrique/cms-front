@@ -31,4 +31,6 @@ function Categories() {
   );
 }
 
+Categories.label = "Categoría";
+
 export default Categories;

@@ -15,4 +15,6 @@ function UiCard({ link, image, title }) {
   );
 }
 
+UiCard.label = "Card";
+
 export default UiCard;

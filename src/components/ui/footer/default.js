@@ -33,4 +33,6 @@ function UiFooter() {
   );
 }
 
+UiFooter.label = "Pié de página";
+
 export default UiFooter;

@@ -36,4 +36,6 @@ function UiHeader() {
   );
 }
 
+UiHeader.label = "Cabecera";
+
 export default UiHeader;

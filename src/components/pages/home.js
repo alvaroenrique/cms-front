@@ -2,8 +2,9 @@ import React from "react";
 
 import UiDescription from "../ui/description/default";
 import UiCard from "../ui/card/default";
+import UiGrid from "../ui/grid/dafult";
 
-import { Grid, Container } from "../styled/layout";
+import { Container } from "../styled/layout";
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
             "Bookstore.com es una página que te recomienda libros y te ayuda a encontrar los mejores precios en internet."
         }}
       />
-      <Grid>
+      <UiGrid>
         <UiCard
           {...{
             image:
@@ -24,9 +25,11 @@ function Home() {
             title: "Arquitectura de software"
           }}
         />
-      </Grid>
+      </UiGrid>
     </Container>
   );
 }
+
+Home.label = "Homepage";
 
 export default Home;

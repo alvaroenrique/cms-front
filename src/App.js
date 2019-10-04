@@ -33,9 +33,10 @@ const Left = styled.div`
   max-width: 300px;
   width: 100%;
   height: 100vh;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
-  background-color: #e4e4e4;
+  overflow-y: scroll;
+  background-color: #333;
 `;
 
 const Right = styled.div`
@@ -47,22 +48,33 @@ const H1 = styled.h1`
   font-weight: 700;
   font-size: 2rem;
   padding-bottom: 20px;
-  color: #4c4c4c;
+  color: white;
 `;
 
 const H2 = styled.h2`
   font-weight: 700;
   font-size: 1.5rem;
-  margin: 20px 0;
+  margin-bottom: 10px;
 `;
 
-const PagesLinks = styled(Link)`
-  color: #333;
+const AdminLabel = styled(Link)`
+  color: #4f5356;
   text-decoration: none;
-  padding: 5px 0;
   display: block;
-  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #869098;
 `;
+
+const AdminCard = styled.div`
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+`;
+console.log(Home().props);
 
 function App() {
   return (
@@ -70,13 +82,18 @@ function App() {
       <AdminView>
         <Left>
           <H1>Edición de páginas</H1>
-          <H2>Páginas</H2>
-          {pages.map(page => (
-            <div>
-              <PagesLinks to={page.path}>{page.path}</PagesLinks>
-            </div>
-          ))}
-          <H2>Componentes</H2>
+          <AdminCard>
+            <H2>Páginas</H2>
+            {pages.map(page => (
+              <AdminLabel to={page.path}>{page.component.label}</AdminLabel>
+            ))}
+          </AdminCard>
+          <AdminCard>
+            <H2>Componentes</H2>
+            {Home().props.children.map(child => (
+              <div>{child.type.label}</div>
+            ))}
+          </AdminCard>
         </Left>
         <Right>
           <UiHeader></UiHeader>
