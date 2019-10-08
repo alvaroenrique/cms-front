@@ -2,8 +2,9 @@ import React from "react";
 
 import UiDescription from "../ui/description/default";
 import UiCard from "../ui/card/default";
+import UiGrid from "../ui/grid/dafult";
 
-import { Grid, Container } from "../styled/layout";
+import { Container } from "../styled/layout";
 
 function Book() {
   return (
@@ -18,7 +19,7 @@ function Book() {
             "https://images-na.ssl-images-amazon.com/images/I/61RRViAYqdL.jpg"
         }}
       />
-      <Grid>
+      <UiGrid>
         <UiCard
           {...{
             image:
@@ -27,7 +28,7 @@ function Book() {
             title: "Comprar"
           }}
         />
-      </Grid>
+      </UiGrid>
     </Container>
   );
 }

@@ -2,8 +2,9 @@ import React from "react";
 
 import UiDescription from "../ui/description/default";
 import UiCard from "../ui/card/default";
+import UiGrid from "../ui/grid/dafult";
 
-import { Grid, Container } from "../styled/layout";
+import { Container } from "../styled/layout";
 
 function Categories() {
   return (
@@ -17,7 +18,7 @@ function Categories() {
             "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
         }}
       />
-      <Grid>
+      <UiGrid>
         <UiCard
           {...{
             image:
@@ -26,7 +27,7 @@ function Categories() {
             title: "Código limpio"
           }}
         />
-      </Grid>
+      </UiGrid>
     </Container>
   );
 }
