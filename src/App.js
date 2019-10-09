@@ -46,14 +46,14 @@ const Right = styled.div`
   margin-left: 300px;
 `;
 
-console.log(Home().props);
+// console.log(Home().props);
 
 function App() {
   return (
     <BrowserRouter>
       <AdminView>
         <Left>
-          <Admin {...{ pages, Categories }}></Admin>
+          <Admin {...{ pages }}></Admin>
         </Left>
         <Right>
           <UiHeader></UiHeader>
